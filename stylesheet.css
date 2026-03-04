@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+    font-family: "arial", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    font-style: normal;
+}
+
+h2 {
+    color: white;
+    text-align: left;
+    font-family: "Georgia", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+}
+
+p {
+    color: white;
+    font-size: 14px;
+    font-family: "georgia", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
