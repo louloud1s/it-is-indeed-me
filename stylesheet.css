@@ -25,6 +25,73 @@ p {
     font-size: 14px;
     font-family: "georgia", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
+}
+
+a {
+    color: white;
+    font-size: 14px;
+    font-family: "garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    display: block;
+    margin-bottom: 1px;
+}
+
+
+/* .pointer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 2rem;
+    aspect-ratio: 1;
+    background: rgb(0 0 0 / 20%);
+    border: 1px solid transparent;
+    border-radius: 100%;
+    pointer-events: none;
+
+    transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0);
+} */
+
+.metadata {
+    position: fixed;
+    left: var(--pointer-x);
+    /* Listen to the JavaScript X */
+    top: var(--pointer-y);
+    /* Listen to the JavaScript Y */
+
+    /* Takes it out of the title line entirely */
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    background: #111;
+    color: #000000;
+    padding: 10px 20px;
+    border: 1px solid #444;
+    border-radius: 0px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+    /* This prevents the "stuck at top-left" look before JS kicks in */
+    transform: translate(-50%, -50%);
+}
+
+a:hover .metadata {
+    background: rgba(8, 255, 197, 0.833);
+    visibility: visible;
+    opacity: 1;
+    border-color: white;
+}
+
+/* Add commas between medium items */
+.medium:not(:last-child)::after {
+    content: ", ";
+    /* Adds the comma and a space */
+    color: #000000;
+    /* You can make the comma a subtle gray */
+    margin-right: 4px;
+    /* Adjust spacing as needed */
 }
