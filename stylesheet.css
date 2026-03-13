@@ -20,6 +20,15 @@ h2 {
     font-style: italic;
 }
 
+h3 {
+    color: white;
+    text-align: left;
+    font-family: "garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
 p {
     color: white;
     font-size: 14px;
@@ -40,21 +49,28 @@ a {
     margin-bottom: 1px;
 }
 
+.auto-resize-iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-/* .pointer {
-    position: fixed;
+.auto-resize-iframe iframe {
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
-    width: 2rem;
-    aspect-ratio: 1;
-    background: rgb(0 0 0 / 20%);
-    border: 1px solid transparent;
-    border-radius: 100%;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-top: 20px;
+    /* Adjust if needed, or move to container */
+}
 
-    transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0);
-} */
+
+
+/* HOVER AND METADATA */
 
 .metadata {
     position: fixed;
@@ -78,6 +94,7 @@ a {
     /* This prevents the "stuck at top-left" look before JS kicks in */
     transform: translate(-50%, -50%);
 }
+
 
 a:hover .metadata {
     background: rgba(8, 255, 197, 0.833);
