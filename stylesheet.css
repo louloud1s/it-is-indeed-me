@@ -52,12 +52,11 @@ a {
 
 .auto-resizable-iframe {
     max-width: 1000px;
-    margin: 0px auto;
 }
 
 .auto-resizable-iframe>div {
     position: relative;
-    padding-bottom: 75%;
+    padding-bottom: 56.25%;
     height: 0px;
 }
 
