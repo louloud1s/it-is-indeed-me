@@ -23,3 +23,24 @@ window.addEventListener('mousemove', (e) => {
     }
 });
 
+// 3. Handle image preview on hover
+const previewContainer = document.getElementById('image-preview-container');
+const previewImg = document.getElementById('main-preview');
+
+projectLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        const imageUrl = link.getAttribute('data-image');
+        if (imageUrl) {
+            previewImg.src = imageUrl;
+            previewContainer.style.display = 'block';
+        }
+    });
+
+    link.addEventListener('mouseleave', () => {
+        previewContainer.style.display = 'none';
+        previewImg.src = "";
+    });
+});
+
+
+

@@ -11,7 +11,9 @@ h1 {
     font-optical-sizing: auto;
     font-size: 50px;
     font-style: normal;
+    text-shadow: 4px 4px 6px black, 0 0 25px blue, 0 0 5px darkblue;
 }
+
 
 h2 {
     color: white;
@@ -53,6 +55,10 @@ a {
     margin-bottom: 1px;
 }
 
+.artworks {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 50px rgb(0, 255, 0), 0 0 20px rgb(161, 255, 192);
+}
 
 .neonText {
     color: #fff;
@@ -101,14 +107,6 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
 /* HOVER AND METADATA */
 
 .metadata {
@@ -134,7 +132,7 @@ a {
     transform: translate(-50%, -50%);
 }
 
-
+/* Metadata on Hover */
 a:hover .metadata {
     background: rgba(8, 255, 197, 0.833);
     visibility: visible;
@@ -150,4 +148,36 @@ a:hover .metadata {
     /* You can make the comma a subtle gray */
     margin-right: 4px;
     /* Adjust spacing as needed */
+}
+
+
+/* Image preview box */
+
+#image-preview-container {
+    position: fixed;
+    top: 50%;           /* Center it vertically */
+    right: 1vw;          /* Gap from the right edge */
+    transform: translateY(-50%); /* Perfect vertical alignment */
+    
+    /* Responsive Width */
+    width: 50vw;        /* 50% of the screen width */
+    min-width: 200px;   /* Won't get smaller than this */
+    max-width: 800px;   /* Won't get larger than this */
+    height: auto;
+    
+    background: white;
+    border: 1px solid rgb(255, 255, 255);
+    outline: 3px solid #fe00e0;
+    z-index: -1;
+    display: none;      /* Hidden until JS triggers it */
+    overflow: hidden;
+    pointer-events: none;
+    box-shadow: #0048ff 0px 0px 30px;
+}
+
+#main-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crucial so the image fills the star points nicely */
+    display: block;
 }
