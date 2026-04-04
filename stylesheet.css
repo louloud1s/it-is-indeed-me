@@ -31,17 +31,25 @@ h3 {
     text-align: left;
     font-family: "garamond", serif;
     font-optical-sizing: auto;
+    font-size: 40px;
     font-weight: 200;
-    font-style: normal;
+    font-style: italic;
 }
 
 p {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "georgia", serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+}
+
+.column p {
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    font-style: italic;
 }
 
 a {
@@ -64,21 +72,14 @@ a {
     text-shadow: 1px 1px 2px black, 0 0 50px rgb(0, 255, 0), 0 0 20px rgb(161, 255, 192);
 }
 
-.neonText {
-    color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #00ffaa,
-        0 0 82px #0fa,
-        0 0 92px #0fa,
-        0 0 102px #0fa,
-        0 0 151px #0fa;
 
-}
 
-/* FLEXBOXES */
+
+
+
+
+
+/* HORIZONTAL IMAGE ALIGNMENT */
 
 .container {
     display: flex;
@@ -87,13 +88,55 @@ a {
     padding: 20px;
 }
 
+.row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column p {
+    margin: 10px 0 0 0;
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+
+/* VERTICAL IMAGE ALIGNMENT */
+
+.container-vertical {
+    padding: 10px;
+}
+
+.line {
+    width: 200px;
+    margin: 20px;
+}
+
+/* image size */
+
+.line img {
+    width: 1700px;
+}
+
+
+
 
 
 
 /* VIDEO BOXES */
 
 .auto-resizable-iframe {
-    max-width: 1000px;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .auto-resizable-iframe>div {
@@ -159,21 +202,28 @@ a:hover .metadata {
 
 #image-preview-container {
     position: fixed;
-    top: 50%;           /* Center it vertically */
-    right: 1vw;          /* Gap from the right edge */
-    transform: translateY(-50%); /* Perfect vertical alignment */
-    
+    top: 50%;
+    /* Center it vertically */
+    right: 1vw;
+    /* Gap from the right edge */
+    transform: translateY(-50%);
+    /* Perfect vertical alignment */
+
     /* Responsive Width */
-    width: 50vw;        /* 50% of the screen width */
-    min-width: 200px;   /* Won't get smaller than this */
-    max-width: 800px;   /* Won't get larger than this */
+    width: 50vw;
+    /* 50% of the screen width */
+    min-width: 200px;
+    /* Won't get smaller than this */
+    max-width: 800px;
+    /* Won't get larger than this */
     height: auto;
-    
+
     background: white;
     border: 1px solid rgb(255, 255, 255);
     outline: 3px solid #fe00e0;
     z-index: -1;
-    display: none;      /* Hidden until JS triggers it */
+    display: none;
+    /* Hidden until JS triggers it */
     overflow: hidden;
     pointer-events: none;
     box-shadow: #0048ff 0px 0px 30px;
@@ -182,6 +232,7 @@ a:hover .metadata {
 #main-preview {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crucial so the image fills the star points nicely */
+    object-fit: cover;
+    /* Crucial so the image fills the star points nicely */
     display: block;
 }
