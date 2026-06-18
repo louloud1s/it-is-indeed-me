@@ -25,7 +25,7 @@ h2 {
     text-align: left;
     font-family: "Georgia", serif;
     font-optical-sizing: auto;
-    font-size: 40px;
+    font-size: 100px;
     font-weight: 400;
     font-style: italic;
     text-decoration: underline;
@@ -69,7 +69,11 @@ a {
 }
 
 .artworks a {
+    display: block;
+    width: 50vw;
+    max-width: 50vw;
     font-size: 38px;
+    line-height: 1.2;
 }
 
 .artworks {
@@ -84,7 +88,7 @@ a {
 
 
 
-/* HORIZONTAL IMAGE ALIGNMENT */
+/* HORIZONTAL IMAGE ALIGNMENT FOR WORK PAGES*/
 
 .container {
     display: flex;
