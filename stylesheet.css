@@ -14,9 +14,19 @@ h1 {
     text-shadow: 4px 4px 6px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-
+/* Remove underlines from links */
 a {
     text-decoration: none;
+}
+
+/* LINKS ON DESCRIPTIONS ALIGNMENT */
+.description a {
+    display: inline-block;
+    vertical-align: middle;
+}
+.description a img {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 
@@ -57,7 +67,7 @@ p {
     font-style: italic;
 }
 
-a {
+.artworks a {
     color: white;
     font-size: 14px;
     font-family: "garamond", serif;
@@ -143,8 +153,20 @@ a {
     margin: 0 auto;
 }
 
+/* i-will-love-you-forever box */
+
+body.AI-talk .auto-resizable-iframe {
+    width: min(90vw, 900px);
+    max-width: 1000px;
+    margin: 5rem auto 2rem;
+    display: block;
+}
+
+
+
 .auto-resizable-iframe>div {
     position: relative;
+    width: 100%;
     padding-bottom: 56.25%;
     height: 0px;
 }
