@@ -12,18 +12,39 @@ body {
     display: block;
 }
 
+
+/* INDEX PAGE */
 .name h1 {
     color: white;
     text-align: left;
-    font-family: "arial", sans-serif;
     font-optical-sizing: auto;
-    font-size: 50px;
-    font-style: normal;
-    text-shadow: 4px 4px 6px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 70px;
+    font-style: italic;
+    text-shadow: 0 5px 20px rgb(255, 0, 242);
+    margin: 2rem 0 0.1rem 1rem;
+    position: fixed
 }
 
+.side-text a {
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: right center;
 
-/* INDEX PAGE */
+}
+
+.side-text a:hover {
+    color: #26ff00;
+    font-size: 50px;
+}
+
+/* ARTWORK LIST */
 
 
 /* Remove underlines from links */
@@ -42,17 +63,6 @@ a {
     display: inline-block;
 }
 
-
-h2 {
-    color: white;
-    text-align: left;
-    font-family: "Georgia", serif;
-    font-optical-sizing: auto;
-    font-size: 100px;
-    font-weight: 400;
-    font-style: italic;
-    text-decoration: underline;
-}
 
 h3 {
     color: white;
@@ -89,14 +99,15 @@ p {
     font-style: normal;
     display: block;
     margin-bottom: 1px;
-}
-
-.artworks a {
     display: block;
     width: 50vw;
     max-width: 50vw;
     font-size: 38px;
     line-height: 1.2;
+}
+
+.artworks a:hover {
+    font-size: 40px;
 }
 
 .artworks {
@@ -300,10 +311,49 @@ body.AI-talk .auto-resizable-iframe {
     height: 100%;
 }
 
-
-
 /* ARTWORK PAGES */
 
+/* Artwork texts */
+h2 {
+    color: white;
+    text-align: left;
+    font-family: "Georgia", serif;
+    font-optical-sizing: auto;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0rem;
+}
+
+/* combination of title and date in a line */
+.artwork-info {
+    margin: 7.5rem 0 0 0;
+    display: flex;
+    align-items: baseline;
+    position: fixed;
+    /* underline */
+    color: white;
+    font-size: 100px;
+    text-decoration: underline;
+}
+
+/* Bringing closer name and title */
+.artwork-info h2,
+.artwork-info h3 {
+    margin: 0;
+    line-height: 0.9;
+}
+
+/* space for the top of the document */
+.page-content {
+    padding-top: 270px;
+}
+
+.index .page-content {
+    padding-top: 80px;
+}
+
+/* Watch on youtube text */
 .watch-on-youtube {
     display: block;
     width: 100%;
@@ -314,18 +364,78 @@ body.AI-talk .auto-resizable-iframe {
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0011, 0 0 30px #26ff00, 0 0 40px #ff00a2, 0 0 50px #ff00c8;
 }
 
+/* Flex columns for screenshots */
+
 .video-screenshots {
-    margin-top: 60px;
-    padding: 60px;
+    margin: 60px;
+    padding: 60px auto;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 90vw;
+}
+
+/* i'm not really sure why there need to be two wrappers for the centered images but this works */
+.screenshot {
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
 
 .screenshot img {
-    max-width: 60%;
+    max-width: 90%;
     height: auto;
     display: block;
-    margin: 20px;
+    margin: 20px auto;
+}
+
+/* Images of artworks, before the screenshots */
+.artwork-image img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+/* Smaller descriptions in the pages */
+.secondary-description p {
+    color: white;
+    text-shadow: 0 0 4px #ee00ff;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* CONTACT PAGE */
+.contact-info {
+    color: white;
+    text-align: center;
+    font-family: "garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.contact-info a {
+    color: white;
+}
+
+.contact-info a:hover {
+    color: rgb(248, 2, 2);
+}
+
+.contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-gif {
+    width: 150px;
+    height: auto;
 }
