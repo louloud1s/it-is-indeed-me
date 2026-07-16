@@ -2,9 +2,17 @@ body {
     background-color: black;
 }
 
-/* TEXTS */
+/* DRAWING CANVAS */
+#drawingCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Keeps it in the background */
+    display: block;
+}
 
-h1 {
+.name h1 {
     color: white;
     text-align: left;
     font-family: "arial", sans-serif;
@@ -13,6 +21,10 @@ h1 {
     font-style: normal;
     text-shadow: 4px 4px 6px black, 0 0 25px blue, 0 0 5px darkblue;
 }
+
+
+/* INDEX PAGE */
+
 
 /* Remove underlines from links */
 a {
@@ -24,6 +36,7 @@ a {
     display: inline-block;
     vertical-align: middle;
 }
+
 .description a img {
     vertical-align: middle;
     display: inline-block;
@@ -91,99 +104,6 @@ p {
     text-shadow: 1px 1px 2px black, 0 0 50px rgb(0, 255, 0), 0 0 20px rgb(161, 255, 192);
 }
 
-
-
-
-
-
-
-
-/* HORIZONTAL IMAGE ALIGNMENT FOR WORK PAGES*/
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.column p {
-    margin: 10px 0 0 0;
-    color: white;
-    text-align: left;
-}
-
-
-
-
-
-
-/* VERTICAL IMAGE ALIGNMENT */
-
-.container-vertical {
-    padding: 10px;
-}
-
-.line {
-    width: 200px;
-    margin: 20px 40px;
-}
-
-/* image size */
-
-.line img {
-    width: 1700px;
-}
-
-
-
-
-
-/* VIDEO BOXES */
-
-.auto-resizable-iframe {
-    max-width: 2000px;
-    margin: 0 auto;
-}
-
-/* i-will-love-you-forever box */
-
-body.AI-talk .auto-resizable-iframe {
-    width: min(90vw, 900px);
-    max-width: 1000px;
-    margin: 5rem auto 2rem;
-    display: block;
-}
-
-
-
-.auto-resizable-iframe>div {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0px;
-}
-
-.auto-resizable-iframe iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-
 /* HOVER AND METADATA */
 
 .metadata {
@@ -228,7 +148,7 @@ a:hover .metadata {
 }
 
 
-/* Image preview box */
+/* Image hover preview box */
 
 #image-preview-container {
     position: fixed;
@@ -247,16 +167,19 @@ a:hover .metadata {
     max-width: 800px;
     /* Won't get larger than this */
     height: auto;
-
-    background: white;
-    border: 1px solid rgb(255, 255, 255);
-    outline: 3px solid #fe00e0;
+    /* border: 1px solid rgb(255, 255, 255);
+    outline: 3px solid #fe00e0; */
     z-index: -1;
     display: none;
     /* Hidden until JS triggers it */
     overflow: hidden;
     pointer-events: none;
-    box-shadow: #0048ff 0px 0px 30px;
+    /* HEART SHAPE */
+    mask:
+        radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+        radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+        linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
 
 #main-preview {
@@ -265,4 +188,144 @@ a:hover .metadata {
     object-fit: cover;
     /* Crucial so the image fills the star points nicely */
     display: block;
+}
+
+.preview-shadow-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    z-index: -1;
+    display: inline-block;
+    filter: drop-shadow(5px 30px 30px rgb(254, 17, 17));
+}
+
+
+
+
+/* HORIZONTAL IMAGE ALIGNMENT FOR WORK PAGES*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column p {
+    margin: 10px 0 0 0;
+    color: white;
+    text-align: left;
+}
+
+
+
+
+
+
+VERTICAL IMAGE ALIGNMENT .container-vertical {
+    padding: 10px;
+}
+
+.line {
+    width: 200px;
+    margin: 20px 40px;
+}
+
+/* image size */
+
+.line img {
+    width: 1700px;
+}
+
+
+
+
+
+/* VIDEO BOXES */
+
+.video-wrapper {
+    width: min(90vw, 900px);
+    margin: 2rem auto 0;
+}
+
+.video-wrapper iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+    background: #000;
+}
+
+.auto-resizable-iframe {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* i-will-love-you-forever box */
+
+body.AI-talk .auto-resizable-iframe {
+    width: min(90vw, 900px);
+    max-width: 1000px;
+    margin: 5rem auto 2rem;
+    display: block;
+}
+
+
+
+.auto-resizable-iframe>div {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* ARTWORK PAGES */
+
+.watch-on-youtube {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    text-align: center;
+
+    font-size: 40px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0011, 0 0 30px #26ff00, 0 0 40px #ff00a2, 0 0 50px #ff00c8;
+}
+
+.video-screenshots {
+    margin-top: 60px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.screenshot img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 20px;
 }
