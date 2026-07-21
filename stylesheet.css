@@ -1,7 +1,3 @@
-body {
-    background-color: black;
-}
-
 /* DRAWING CANVAS */
 #drawingCanvas {
     position: fixed;
@@ -27,22 +23,101 @@ body {
     position: fixed
 }
 
+.name h1:hover {
+    font-size: 72px;
+    color: #ff0000;
+}
+
+/* Top Text General Properties */
+.top-text a {
+    color: white;
+    font-size: 23px;
+    position: fixed;
+    display: flex;
+    transform-origin: center;
+}
+
+/* 3D Work */
+.top-text .three-d-work a {
+    top: 10%;
+    right: 25%;
+}
+
+/* email */
+.top-text .email p {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    transform-origin: center;
+    top: 1%;
+    right: 2%;
+    border: 1.5px solid white;
+    padding: 6px 10px;
+    display: inline-block;
+}
+
+
+
+/* Side Text General Properties */
 .side-text a {
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     position: fixed;
-    top: 10%;
-    right: 5%;
     display: flex;
     transform: rotate(90deg) translateX(50%);
     transform-origin: right center;
-
+    padding: 25px 25px;
 }
 
-.side-text a:hover {
+/* Hover property */
+.links a:hover {
     color: #26ff00;
-    font-size: 50px;
+    text-decoration: underline;
+    transform: scale(1.2);
+    transform-origin: center center;
 }
+
+/* Substack */
+.side-text .substack a {
+    top: 25%;
+    right: 5%;
+
+}
+
+/* Instagram */
+.side-text .instagram a {
+    top: 39%;
+    right: 5%;
+}
+
+/* Youtube */
+.side-text .youtube a {
+    top: 53%;
+    right: 5%;
+
+}
+
+/* Vimeo */
+.side-text .vimeo a {
+    top: 65%;
+    right: 5%;
+}
+
+
+
+
+/* Png Decorations */
+
+.snake-png img {
+    position: fixed;
+    left: 700px;
+    bottom: 100;
+    width: 100px;
+}
+
+
+
 
 /* ARTWORK LIST */
 
@@ -107,7 +182,7 @@ p {
 }
 
 .artworks a:hover {
-    font-size: 40px;
+    color: #ff0011;
 }
 
 .artworks {
@@ -212,58 +287,6 @@ a:hover .metadata {
 }
 
 
-
-
-/* HORIZONTAL IMAGE ALIGNMENT FOR WORK PAGES*/
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.column p {
-    margin: 10px 0 0 0;
-    color: white;
-    text-align: left;
-}
-
-
-
-
-
-
-VERTICAL IMAGE ALIGNMENT .container-vertical {
-    padding: 10px;
-}
-
-.line {
-    width: 200px;
-    margin: 20px 40px;
-}
-
-/* image size */
-
-.line img {
-    width: 1700px;
-}
-
-
-
-
-
 /* VIDEO BOXES */
 
 .video-wrapper {
@@ -284,17 +307,6 @@ VERTICAL IMAGE ALIGNMENT .container-vertical {
     max-width: 2000px;
     margin: 0 auto;
 }
-
-/* i-will-love-you-forever box */
-
-body.AI-talk .auto-resizable-iframe {
-    width: min(90vw, 900px);
-    max-width: 1000px;
-    margin: 5rem auto 2rem;
-    display: block;
-}
-
-
 
 .auto-resizable-iframe>div {
     position: relative;
@@ -344,14 +356,25 @@ h2 {
     line-height: 0.9;
 }
 
-/* space for the top of the document */
+/* space for the top of the document. Influenced by body class*/
 .page-content {
     padding-top: 270px;
 }
 
 .index .page-content {
-    padding-top: 80px;
+    padding-top: 150px;
 }
+
+.escaping-the-physical-prison .page-content {
+    padding-top: 450px;
+}
+
+.three-d .page-content {
+    padding-top: 200;
+}
+
+
+
 
 /* Watch on youtube text */
 .watch-on-youtube {
@@ -397,19 +420,22 @@ h2 {
     height: auto;
     display: block;
     margin: 30px auto;
+
 }
 
-/* Smaller descriptions in the pages */
-.secondary-description p {
+/* Bigger descriptions in the pages */
+.description h3 {
     color: white;
     text-shadow: 0 0 4px #ee00ff;
-    font-size: 30px;
+    font-family: 'Georgia';
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
     text-align: center;
 }
 
-
-/* CONTACT PAGE */
-.contact-info {
+/* Small descriptions under specific artworks */
+.artwork-image p {
     color: white;
     text-align: center;
     font-family: "garamond", serif;
@@ -419,23 +445,41 @@ h2 {
     font-style: italic;
 }
 
-.contact-info a {
-    color: white;
+/* Artwork Text  */
+.description p {
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 30px rgb(55, 0, 255),
+        0 0 40px rgb(0, 183, 255),
+        0 0 60px rgb(243, 0, 239);
 }
 
-.contact-info a:hover {
-    color: rgb(248, 2, 2);
+
+/* 3D Works PAGE */
+
+.clickable-png {
+    position: absolute;
+    width: 400px;
 }
 
-.contact-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+.clickable-png img:hover {
+    transform: scale(1.1);
 }
 
-.contact-gif {
-    width: 150px;
-    height: auto;
+.clickable-png .doom img {
+    width: 200;
+    position: absolute;
+    top: 100%;
+}
+
+.clickable-png .frilly img {
+    width: 200;
+    position: absolute;
+}
+
+.clickable-png .helmet img {
+    width: 300;
+    position: absolute;
 }
