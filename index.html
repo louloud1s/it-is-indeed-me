@@ -4,194 +4,255 @@
     <title> louloudisisissiiss</title>
     <link rel="stylesheet" href="stylesheet.css">
     <style>
-        #drawingCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            /* Keeps it in the background */
-            display: block;
+        body {
+            background-image:
+                radial-gradient(rgb(255, 0, 0), rgb(4, 0, 255), green);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
     </style>
+
+    <!-- FONTS IMPORT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
+
+    <!-- Waving Smiley - https://www.cursors-4u.com/cursor/smi12 -->
+    <link rel="stylesheet" href="https://cdn.cursors-4u.net/cursors/animated/smi12-9d460c49-32.css">
+    <!-- End www.Cursors-4U.com Code -->
+
+
 </head>
 
-<body>
-
+<body class="index">
+    <!-- Drawing canvas import -->
     <canvas id="drawingCanvas"></canvas>
     <script src="canvasdraw.js"></script>
 
 
-    <!-- TITLE -->
-    <div class="name-title">
-        <a href="index.html">
-
+    <!-- NAME -->
+    <div class="name">
+        <a href="./">
             <h1> LOULOUDIS </h1>
-
         </a>
     </div>
 
-    <div class = "description">
-        <p> hello this is my website it's still in progress... But find me on <a href="https://www.instagram.com/viscosity_louloudis/" target="_blank"><img src="images/instagram.gif" style="width: 200px; " alt="Instagram"></a></p>
+    <!-- LINKS -->
+    <div class="links">
+
+
+        <!-- TOP TEXT -->
+
+        <div class="top-text">
+            <span class="three-d-work">
+                <a href="./three-d-work" target="blank">3D Work</a></span>
+
+            <span class="email">
+                <p>louloudiskx@gmail.com</p>
+            </span>
+        </div>
+
+
+        <!-- SIDE TEXT -->
+
+        <div class="side-text">
+            <span class="substack">
+                <a href="https://l0uloud1.substack.com" target="blank">Substack</a>
+            </span>
+
+            <span class="instagram">
+                <a href="https://www.instagram.com/viscosity_louloudis/" target="blank">Instagram</a>
+            </span>
+
+            <span class="youtube">
+                <a href="https://www.youtube.com/@louloud1s" target="blank">Youtube</a>
+            </span>
+
+            <span class="vimeo">
+                <a href="https://vimeo.com/louloudis" target="blank">Vimeo</a>
+            </span>
+
+
+        </div>
     </div>
 
-    <p id="coordinates"></p>
+
+    <!-- CONTENT OF THE PAGE -->
+    <div class="page-content">
+
+        <!-- ARTIST DESCRIPTION -->
+        <div class="artist-description">
+            <p> hello this is my website it's still in progress...
+            </p>
+            </span>
+        </div>
 
 
-    <!-- PREVIEW CONTAINER -->
+        <!-- PREVIEW CONTAINER -->
+        <div class="preview-shadow-wrapper">
+            <div id="image-preview-container">
+                <img id="main-preview" src="" alt="Preview">
+            </div>
+        </div>
+        <div class="pointer" aria-hidden="true"></div>
 
-    <div id="image-preview-container">
-        <img id="main-preview" src="" alt="Preview">
-    </div>
+        <!-- ARTWORKS: -->
+
+        <div class="artworks">
+
+            <!-- i-will-love-you-forever -->
+            <a href="./i-will-love-you-forever" style="text-decoration: underline;" target="_blank"
+                data-image="images/i-will-love/iwillove.png">
+                <i> >>>>>> i-will-love-you-forever </i>
+
+                <div class="metadata">
+                    <span class="date medium">2026
+                        <span class="medium">digital</span>
+                        <span class="medium">script</span>
+                        <span class="medium">webart</span>
+                        <span class="medium">procedural</span>
+                        <span class="medium">realtime</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
+
+            <!-- RAGISA -->
+            <a href="./ragisa" style="text-decoration: underline;" target="_blank"
+                data-image="images\ragisa\ragisa-preview.png">
+                <i> >>>>>> RAGISA </i>
+
+                <div class="metadata">
+                    <span class="date medium">2026
+                        <span class="medium">digital</span>
+                        <span class="medium">virtual reality</span>
+                        <span class="medium">3D</span>
+                        <span class="medium">videoart</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
+
+            <!-- SUBMIT THIS FORM -->
+            <a href="https://louloud1s.github.io/plssubmitthisform/" style=" text-decoration: underline;"
+                target="_blank" data-image="images\pls-submit\preview.png">
+                <i> >>>>>> $please_submit_this_form </i>
+
+                <div class=" metadata">
+                    <span class="date medium">2026
+                        <span class="medium">digital</span>
+                        <span class="medium">webart</span>
+                        <span class="medium">script</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
+
+            <!-- there you go here's a gesture -->
+            <a href="heres a gesture.html" style=" text-decoration: underline;" target="_blank"
+                data-image="images\heres a gesture\preview.png">
+                <i> >>>>>> there you go, here's a gesture </i>
+
+                <div class=" metadata">
+                    <span class="date medium">2025
+                        <span class="medium">digital</span>
+                        <span class="medium">collage</span>
+                        <span class="medium">glitch</span>
+                        <span class="medium">drawing</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
 
 
-    <div class="pointer" aria-hidden="true"></div>
+            <!-- NIGHTMARE SEQUENCE -->
+            <a href="nightmaresequence.html" style=" text-decoration: underline;"
+                data-image="images\nightmare sequence\NightmareSec_3.jpg" target="_blank">
+                <i> >>>>>>
+                    NIGHTMARE SEQUENCE </i>
 
-    <!-- ARTWORKS: -->
+                <div class="metadata">
+                    <span class="date medium">2022
+                        <span class="medium">digital</span>
+                        <span class="medium">videoart</span>
+                        <span class="medium">3D</span>
+                        <span class="medium">animation</span>
+                    </span>
+                </div>
 
-    <div class="artworks">
+            </a>
+            <br>
 
- <!-- i-will-love-you-forever -->
-        <a href="i-will-love-you-forever.html" style="text-decoration: underline;" target="_blank"
-            data-image="images/i-will-love/iwillove.png">
-            <i> >>>>>> i-will-love-you-forever </i>
 
-            <div class="metadata">
-                <span class="date medium">2026
-                    <span class="medium">digital</span>
-                    <span class="medium">script</span>
-                    <span class="medium">webart</span>
-                    <span class="medium">procedural</span>
-                    <span class="medium">realtime</span>
-                </span>
+
+            <!-- ESCAPING THE PHYSICAL PRISON -->
+            <a href="./escaping-the-physical-prison" style=" text-decoration: underline;"
+                data-image="images\physical prison\etpp-preview.jpg" target="_blank">
+                <i> >>>>>>
+                    Escaping the physical prison comes at the cost of no warmth </i>
+
+                <div class="metadata">
+                    <span class="date medium">2022
+                        <span class="medium">digital</span>
+                        <span class="medium">videoart</span>
+                        <span class="medium">3D</span>
+                        <span class="medium">animation</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
+
+            <!-- FURRY LOVE // FURRY WAR -->
+            <a href="./furry-love-furry-war" style=" text-decoration: underline;" target="_blank"
+                data-image="images\furry love furry war\preview.png">
+                <i> >>>>>> FURRY LOVE // FURRY WAR </i>
+
+                <div class="metadata">
+                    <span class="date medium">2020
+                        <span class="medium">digital</span>
+                        <span class="medium">sound</span>
+                        <span class="medium">videoart</span>
+                        <span class="medium">performance</span>
+                    </span>
+                </div>
+
+            </a>
+            <br>
+
+            <!-- LOVEREMOTIONAL DIARY -->
+
+            <a href="./loveremotional-diary" style=" text-decoration: underline;" target="_blank"
+                data-image="images\loveremotional diary\loveremotional-black.jpg">
+                <i> >>>>>> (L)OVEREMOTIONAL DIARY </i>
+
+                <div class="metadata">
+                    <span class="date medium">2020
+                        <span class="medium">digital</span>
+                        <span class="medium">videoart</span>
+                        <span class="medium">collage</span>
+                    </span>
+                </div>
+            </a>
+            <br>
+
+            <!-- DECORATIONS -->
+
+            <div class="png-decorations">
+                <div class="snake-png">
+                    <img src="images\index\snake.png">
+                </div>
             </div>
 
-        </a>
-        <br>
 
-        <!-- RAGISA -->
-        <a href="ragisa.html" style="text-decoration: underline;" target="_blank"
-            data-image="images\ragisa\ragisa-preview.png">
-            <i> >>>>>> RAGISA </i>
-
-            <div class="metadata">
-                <span class="date medium">2026
-                    <span class="medium">digital</span>
-                    <span class="medium">virtual reality</span>
-                    <span class="medium">3D</span>
-                    <span class="medium">videoart</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-        <!-- SUBMIT THIS FORM -->
-        <a href="https://sry-afk.github.io/plssubmitthisform/" style=" text-decoration: underline;" target="_blank">
-            <i> >>>>>> $please_submit_this_form </i>
-
-            <div class="metadata">
-                <span class="date medium">2026
-                    <span class="medium">digital</span>
-                    <span class="medium">webart</span>
-                    <span class="medium">script</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-        <!-- there you go here's a gesture -->
-        <a href="heres a gesture.html" style=" text-decoration: underline;" target="_blank">
-            <i> >>>>>> there you go, here's a gesture </i>
-
-            <div class="metadata">
-                <span class="date medium">2025
-                    <span class="medium">digital</span>
-                    <span class="medium">collage</span>
-                    <span class="medium">glitch</span>
-                    <span class="medium">drawing</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-
-        <!-- NIGHTMARE SEQUENCE -->
-        <a href="nightmaresequence.html" style=" text-decoration: underline;"
-            data-image="images\nightmare sequence\NightmareSec_3.jpg" target="_blank">
-            <i> >>>>>>
-                NIGHTMARE SEQUENCE </i>
-
-            <div class="metadata">
-                <span class="date medium">2022
-                    <span class="medium">digital</span>
-                    <span class="medium">videoart</span>
-                    <span class="medium">3D</span>
-                    <span class="medium">animation</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-
-
-        <!-- ESCAPING THE PHYSICAL PRISON -->
-        <a href="escaping the physical prison.html" style=" text-decoration: underline;"
-            data-image="images\physical prison\etpp-preview.jpg" target="_blank">
-            <i> >>>>>>
-                Escaping the physical prison comes at the cost of no warmth </i>
-
-            <div class="metadata">
-                <span class="date medium">2022
-                    <span class="medium">digital</span>
-                    <span class="medium">videoart</span>
-                    <span class="medium">3D</span>
-                    <span class="medium">animation</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-        <!-- FURRY LOVE // FURRY WAR -->
-        <a href="furry love furry war.html" style=" text-decoration: underline;" target="_blank"
-            data-image="images\furry love furry war\meet again4k.jpg">
-            <i> >>>>>> FURRY LOVE // FURRY WAR </i>
-
-            <div class="metadata">
-                <span class="date medium">2020
-                    <span class="medium">digital</span>
-                    <span class="medium">sound</span>
-                    <span class="medium">videoart</span>
-                    <span class="medium">performance</span>
-                </span>
-            </div>
-
-        </a>
-        <br>
-
-        <!-- LOVEREMOTIONAL DIARY -->
-
-        <a href="loveremotional diary.html" style=" text-decoration: underline;" target="_blank"
-            data-image="images\loveremotional diary\loveremotional-black.jpg">
-            <i> >>>>>> (L)OVEREMOTIONAL DIARY </i>
-
-            <div class="metadata">
-                <span class="date medium">2020
-                    <span class="medium">digital</span>
-                    <span class="medium">videoart</span>
-                    <span class="medium">collage</span>
-                </span>
-            </div>
-        </a>
-        <br>
-
-
-    </div>
-
-    <script src="script.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>

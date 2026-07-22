@@ -1,18 +1,126 @@
-body {
-    background-color: black;
+/* DRAWING CANVAS */
+#drawingCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Keeps it in the background */
+    display: block;
 }
 
-/* TEXTS */
 
-h1 {
+/* INDEX PAGE */
+.name h1 {
     color: white;
     text-align: left;
-    font-family: "arial", sans-serif;
     font-optical-sizing: auto;
-    font-size: 50px;
-    font-style: normal;
-    text-shadow: 4px 4px 6px black, 0 0 25px blue, 0 0 5px darkblue;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 70px;
+    font-style: italic;
+    text-shadow: 0 5px 20px rgb(255, 0, 242);
+    margin: 2rem 0 0.1rem 1rem;
+    position: fixed
 }
+
+.name h1:hover {
+    font-size: 72px;
+    color: #ff0000;
+}
+
+/* Top Text General Properties */
+.top-text a {
+    color: white;
+    font-size: 23px;
+    position: fixed;
+    display: flex;
+    transform-origin: center;
+}
+
+/* 3D Work */
+.top-text .three-d-work a {
+    top: 10%;
+    right: 25%;
+}
+
+/* email */
+.top-text .email p {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    transform-origin: center;
+    top: 1%;
+    right: 2%;
+    border: 1.5px solid white;
+    padding: 6px 10px;
+    display: inline-block;
+}
+
+
+
+/* Side Text General Properties */
+.side-text a {
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    transform: rotate(90deg) translateX(50%);
+    transform-origin: right center;
+    padding: 25px 25px;
+}
+
+/* Hover property */
+.links a:hover {
+    color: #26ff00;
+    text-decoration: underline;
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+/* Substack */
+.side-text .substack a {
+    top: 25%;
+    right: 5%;
+
+}
+
+/* Instagram */
+.side-text .instagram a {
+    top: 39%;
+    right: 5%;
+}
+
+/* Youtube */
+.side-text .youtube a {
+    top: 53%;
+    right: 5%;
+
+}
+
+/* Vimeo */
+.side-text .vimeo a {
+    top: 65%;
+    right: 5%;
+}
+
+
+
+
+/* Png Decorations */
+
+.snake-png img {
+    position: fixed;
+    left: 700px;
+    bottom: 100;
+    width: 100px;
+}
+
+
+
+
+/* ARTWORK LIST */
+
 
 /* Remove underlines from links */
 a {
@@ -24,22 +132,12 @@ a {
     display: inline-block;
     vertical-align: middle;
 }
+
 .description a img {
     vertical-align: middle;
     display: inline-block;
 }
 
-
-h2 {
-    color: white;
-    text-align: left;
-    font-family: "Georgia", serif;
-    font-optical-sizing: auto;
-    font-size: 100px;
-    font-weight: 400;
-    font-style: italic;
-    text-decoration: underline;
-}
 
 h3 {
     color: white;
@@ -76,9 +174,6 @@ p {
     font-style: normal;
     display: block;
     margin-bottom: 1px;
-}
-
-.artworks a {
     display: block;
     width: 50vw;
     max-width: 50vw;
@@ -86,103 +181,14 @@ p {
     line-height: 1.2;
 }
 
+.artworks a:hover {
+    color: #ff0011;
+}
+
 .artworks {
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 50px rgb(0, 255, 0), 0 0 20px rgb(161, 255, 192);
 }
-
-
-
-
-
-
-
-
-/* HORIZONTAL IMAGE ALIGNMENT FOR WORK PAGES*/
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.column p {
-    margin: 10px 0 0 0;
-    color: white;
-    text-align: left;
-}
-
-
-
-
-
-
-/* VERTICAL IMAGE ALIGNMENT */
-
-.container-vertical {
-    padding: 10px;
-}
-
-.line {
-    width: 200px;
-    margin: 20px 40px;
-}
-
-/* image size */
-
-.line img {
-    width: 1700px;
-}
-
-
-
-
-
-/* VIDEO BOXES */
-
-.auto-resizable-iframe {
-    max-width: 2000px;
-    margin: 0 auto;
-}
-
-/* i-will-love-you-forever box */
-
-body.AI-talk .auto-resizable-iframe {
-    width: min(90vw, 900px);
-    max-width: 1000px;
-    margin: 5rem auto 2rem;
-    display: block;
-}
-
-
-
-.auto-resizable-iframe>div {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0px;
-}
-
-.auto-resizable-iframe iframe {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-
 
 /* HOVER AND METADATA */
 
@@ -228,7 +234,7 @@ a:hover .metadata {
 }
 
 
-/* Image preview box */
+/* Image hover preview box */
 
 #image-preview-container {
     position: fixed;
@@ -247,16 +253,19 @@ a:hover .metadata {
     max-width: 800px;
     /* Won't get larger than this */
     height: auto;
-
-    background: white;
-    border: 1px solid rgb(255, 255, 255);
-    outline: 3px solid #fe00e0;
+    /* border: 1px solid rgb(255, 255, 255);
+    outline: 3px solid #fe00e0; */
     z-index: -1;
     display: none;
     /* Hidden until JS triggers it */
     overflow: hidden;
     pointer-events: none;
-    box-shadow: #0048ff 0px 0px 30px;
+    /* HEART SHAPE */
+    mask:
+        radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+        radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+        linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 }
 
 #main-preview {
@@ -265,4 +274,212 @@ a:hover .metadata {
     object-fit: cover;
     /* Crucial so the image fills the star points nicely */
     display: block;
+}
+
+.preview-shadow-wrapper {
+    position: fixed;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    z-index: -1;
+    display: inline-block;
+    filter: drop-shadow(5px 30px 30px rgb(254, 17, 17));
+}
+
+
+/* VIDEO BOXES */
+
+.video-wrapper {
+    width: min(90vw, 900px);
+    margin: 2rem auto 0;
+}
+
+.video-wrapper iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+    background: #000;
+}
+
+.auto-resizable-iframe {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.auto-resizable-iframe>div {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* ARTWORK PAGES */
+
+/* Artwork texts */
+h2 {
+    color: white;
+    text-align: left;
+    font-family: "Georgia", serif;
+    font-optical-sizing: auto;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0rem;
+}
+
+/* combination of title and date in a line */
+.artwork-info {
+    margin: 7.5rem 0 0 0;
+    display: flex;
+    align-items: baseline;
+    position: fixed;
+    /* underline */
+    color: white;
+    font-size: 100px;
+    text-decoration: underline;
+}
+
+/* Bringing closer name and title */
+.artwork-info h2,
+.artwork-info h3 {
+    margin: 0;
+    line-height: 0.9;
+}
+
+/* space for the top of the document. Influenced by body class*/
+.page-content {
+    padding-top: 270px;
+}
+
+.index .page-content {
+    padding-top: 150px;
+}
+
+.escaping-the-physical-prison .page-content {
+    padding-top: 450px;
+}
+
+.three-d .page-content {
+    padding-top: 200;
+}
+
+
+
+
+/* Watch on youtube text */
+.watch-on-youtube {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    text-align: center;
+
+    font-size: 40px;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0011, 0 0 30px #26ff00, 0 0 40px #ff00a2, 0 0 50px #ff00c8;
+}
+
+/* Flex columns for screenshots */
+
+.video-screenshots {
+    margin: 60px;
+    padding: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 90vw;
+}
+
+/* i'm not really sure why there need to be two wrappers for the centered images but this works */
+.screenshot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.screenshot img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Images of artworks, before the screenshots */
+.artwork-image img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+
+}
+
+/* Bigger descriptions in the pages */
+.description h3 {
+    color: white;
+    text-shadow: 0 0 4px #ee00ff;
+    font-family: 'Georgia';
+    font-size: 60px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Small descriptions under specific artworks */
+.artwork-image p {
+    color: white;
+    text-align: center;
+    font-family: "garamond", serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Artwork Text  */
+.description p {
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 30px rgb(55, 0, 255),
+        0 0 40px rgb(0, 183, 255),
+        0 0 60px rgb(243, 0, 239);
+}
+
+
+/* 3D Works PAGE */
+
+.clickable-png {
+    position: absolute;
+    width: 400px;
+}
+
+.clickable-png img:hover {
+    transform: scale(1.1);
+}
+
+.clickable-png .doom img {
+    width: 200;
+    position: absolute;
+    top: 100%;
+}
+
+.clickable-png .frilly img {
+    width: 200;
+    position: absolute;
+}
+
+.clickable-png .helmet img {
+    width: 300;
+    position: absolute;
 }
