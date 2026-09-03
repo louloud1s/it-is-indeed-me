@@ -469,17 +469,33 @@ h2 {
 }
 
 .clickable-png .doom img {
-    width: 200;
-    position: absolute;
+    display: inline-block;
+    width: 190px;
+    position: relative;
     top: 100%;
+    left: 10%;
 }
 
 .clickable-png .frilly img {
-    width: 200;
-    position: absolute;
+    display: inline-block;
+    width: 200px;
+    position: relative;
+    top: 100%;
+    left: 50%;
 }
 
 .clickable-png .helmet img {
-    width: 300;
-    position: absolute;
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    left: 50%;
 }
+
+.clickable-png .python img {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    left: 100%;
+    top: 100%;
+}
+›
