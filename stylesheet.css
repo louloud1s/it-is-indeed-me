@@ -414,6 +414,20 @@ h2 {
     margin: 20px auto;
 }
 
+
+/* WORLDS IMAGES */
+.screenshot .vase {
+    max-width: 400px;
+    border: none;
+}
+
+.screenshot .teapot {
+    max-width: 400px;
+    border: none;
+}
+
+
+
 /* Images of artworks, before the screenshots */
 .artwork-image img {
     max-width: 90%;
