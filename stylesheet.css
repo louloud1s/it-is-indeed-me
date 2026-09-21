@@ -400,7 +400,9 @@ h2 {
     max-width: 90vw;
 }
 
-/* i'm not really sure why there need to be two wrappers for the centered images but this works */
+/* i'm not really sure why there need to be two wrappers for the centered images but this works 
+
+Screenshots have flexbox*/
 .screenshot {
     width: 100%;
     display: flex;
@@ -426,7 +428,17 @@ h2 {
     border: none;
 }
 
-
+/* MARIONETTE IMAGES */
+.screenshot.marionette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.screenshot.marionette > div {
+    width: 100%;
+    max-width: 700px;
+}
 
 /* Images of artworks, before the screenshots */
 .artwork-image img {
@@ -512,4 +524,3 @@ h2 {
     left: 100%;
     top: 100%;
 }
-›
