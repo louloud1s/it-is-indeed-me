@@ -435,7 +435,8 @@ Screenshots have flexbox*/
     align-items: center;
     flex-direction: column;
 }
-.screenshot.marionette > div {
+
+.screenshot.marionette>div {
     width: 100%;
     max-width: 700px;
 }
@@ -494,6 +495,7 @@ Screenshots have flexbox*/
     transform: scale(1.1);
 }
 
+
 .clickable-png .doom img {
     display: inline-block;
     width: 190px;
@@ -510,17 +512,50 @@ Screenshots have flexbox*/
     left: 50%;
 }
 
-.clickable-png .helmet img {
+.clickable-png .helmet {
     display: inline-block;
-    width: 300px;
     position: relative;
-    left: 50%;
+    top: -110%;
+    left: 20%;
+}
+
+.clickable-png .helmet img {
+    display: block;
+    width: 300px;
+}
+
+.clickable-png .python {
+    display: inline-block;
+    position: relative;
+    left: 500px;
+    top: -80px;
 }
 
 .clickable-png .python img {
+    display: block;
+    width: 200px;
+}
+
+.clickable-png .watcher {
     display: inline-block;
-    width: 300px;
     position: relative;
-    left: 100%;
-    top: 100%;
+    top: -900px;
+    left: 180%;
+}
+
+.clickable-png .watcher img {
+    display: block;
+    width: 480px;
+}
+
+.clickable-png .biker {
+    display: inline-block;
+    position: relative;
+    top: -850px;
+    left: 230%;
+}
+
+.clickable-png .biker img {
+    display: block;
+    width: 230px;
 }
