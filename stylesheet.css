@@ -559,3 +559,15 @@ Screenshots have flexbox*/
     display: block;
     width: 230px;
 }
+
+.clickable-png .teeth {
+    display: inline-block;
+    position: relative;
+    top: -1300px;
+    left: 300%;
+}
+
+.clickable-png .teeth img {
+    display: block;
+    width: 240px;
+}
