@@ -18,14 +18,21 @@
     font-weight: 400;
     font-size: 70px;
     font-style: italic;
-    text-shadow: 0 5px 20px rgb(255, 0, 242);
+    /* text-shadow: 0 5px 20px rgb(255, 0, 242); */
     margin: 2rem 0 0.1rem 1rem;
-    position: fixed
+    position: fixed;
+    
+/* This creates the bottom-anchored highlighter effect on a single element */
+    background: linear-gradient(to top, rgb(255, 19, 161) 0.8em, transparent 0.8em);
+    background-repeat: no-repeat;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
 }
+
 
 .name h1:hover {
     font-size: 72px;
-    color: #ff0000;
+    color: #00ff11;
 }
 
 /* Top Text General Properties */
