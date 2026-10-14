@@ -486,6 +486,7 @@ Screenshots have flexbox*/
 
 /* 3D Works PAGE */
 
+
 .clickable-png {
     position: absolute;
     width: 400px;
@@ -498,24 +499,24 @@ Screenshots have flexbox*/
 
 .clickable-png .doom img {
     display: inline-block;
-    width: 190px;
-    position: relative;
-    top: 100%;
+    width: 170px;
+    position: absolute;
+    top: 90px;
     left: 10%;
 }
 
 .clickable-png .frilly img {
     display: inline-block;
     width: 200px;
-    position: relative;
+    position: absolute;
     top: 100%;
-    left: 50%;
+    left: 80%;
 }
 
 .clickable-png .helmet {
     display: inline-block;
-    position: relative;
-    top: -110%;
+    position: absolute;
+    top: 320px;
     left: 20%;
 }
 
@@ -526,9 +527,9 @@ Screenshots have flexbox*/
 
 .clickable-png .python {
     display: inline-block;
-    position: relative;
-    left: 500px;
-    top: -80px;
+    position: absolute;
+    left: 550px;
+    top: 230px;
 }
 
 .clickable-png .python img {
@@ -538,8 +539,8 @@ Screenshots have flexbox*/
 
 .clickable-png .watcher {
     display: inline-block;
-    position: relative;
-    top: -900px;
+    position: absolute;
+    top: 0px;
     left: 180%;
 }
 
@@ -550,9 +551,9 @@ Screenshots have flexbox*/
 
 .clickable-png .biker {
     display: inline-block;
-    position: relative;
-    top: -850px;
-    left: 230%;
+    position: absolute;
+    top: 300px;
+    left: 200%;
 }
 
 .clickable-png .biker img {
@@ -562,9 +563,9 @@ Screenshots have flexbox*/
 
 .clickable-png .teeth {
     display: inline-block;
-    position: relative;
-    top: -1300px;
-    left: 300%;
+    position: absolute;
+    top: 300px;
+    left: 1050px;
 }
 
 .clickable-png .teeth img {
