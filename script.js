@@ -1,3 +1,5 @@
+// SCRIPT FOR THE HOVERING BOXES IN INDEX !!!!!!!!
+
 let activeMetadata = null; // This stores the box we are currently hovering over
 
 // 1. Find all your project links
@@ -41,6 +43,8 @@ projectLinks.forEach(link => {
         previewImg.src = "";
     });
 });
+
+// END OF SCRIPT FOR THE HOVERING BOXES IN INDEX!!!!!!!!!!!!
 
 
 
@@ -244,4 +248,4 @@ function newColour() {
     c.sort(function () { return (0.5 - Math.random()); });
     return ("rgb(" + c[0] + ", " + c[1] + ", " + c[2] + ")");
 }
-// ]]>
+// END OF SCRIPT OF SPARKLES FOR CURSOR!!!!!!!

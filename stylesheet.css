@@ -116,11 +116,11 @@
 
 /* Png Decorations */
 
-.snake-png img {
+.wolf-howl img {
     position: fixed;
-    left: 700px;
-    bottom: 100;
-    width: 100px;
+    right: 150px;
+    bottom: 50px;
+    width: 200px;
 }
 
 
@@ -356,6 +356,42 @@ h2 {
     text-decoration: underline;
 }
 
+
+/* FLEXBOX FOR THIS PAGE */
+
+.viscosity-images {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.viscosity-images div {
+background-color: #f1f1f1;
+margin: 20px;
+padding: 5px;
+font-size: 30px;
+ }
+
+.viscosity-images img {
+height: 300px;
+width:auto;
+ }
+
+.viscosity-images img:hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers it */
+  width: 100vw;                      /* Fits within screen width with margins */
+  height: 100vh;                     /* Fits within screen height with margins */
+  object-fit: contain;              /* Shows 100% of the image without cutting anything */
+  z-index: 9999;
+  padding: 20px;                    /* Space between image and screen edge */
+  box-sizing: border-box;
+}
+
+
+
 /* Bringing closer name and title */
 .artwork-info h2,
 .artwork-info h3 {
@@ -377,6 +413,10 @@ h2 {
 }
 
 .three-d .page-content {
+    padding-top: 200;
+}
+
+.viscosity .page-content {
     padding-top: 200;
 }
 
